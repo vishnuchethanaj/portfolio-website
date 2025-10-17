@@ -1,0 +1,242 @@
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #1a1a2e, #16213e);
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(6px);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #00f2fe;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00f2fe;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h2 {
+  font-size: 2.8em;
+  line-height: 1.3;
+}
+
+.hero-text span {
+  color: #00f2fe;
+}
+
+.hero-text p {
+  margin: 15px 0;
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+button {
+  background: #00f2fe;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #4facfe;
+  box-shadow: 0 0 15px #00f2fe;
+}
+
+.hero-img {
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #00f2fe;
+}
+
+/* ===== SECTION BASE ===== */
+.section {
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.3em;
+  margin-bottom: 40px;
+  color: #00f2fe;
+}
+
+/* ===== ABOUT ===== */
+#about p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+/* ===== SKILLS ===== */
+.skills-container {
+  max-width: 700px;
+  margin: 50px auto;
+  text-align: left;
+}
+
+.skill-card {
+  margin-bottom: 25px;
+}
+
+.skill-card span {
+  font-size: 1.1em;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #00f2fe;
+}
+
+.bar {
+  background: #2c2f48;
+  height: 12px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px #000;
+}
+
+.progress {
+  height: 12px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  width: 0;
+  transition: width 1.5s ease-in-out;
+}
+
+/* Default widths */
+.progress.html { width: 95%; }
+.progress.css { width: 90%; }
+.progress.js { width: 80%; }
+.progress.react { width: 75%; }
+.progress.python { width: 85%; }
+
+/* Hover Glow */
+.skill-card:hover .progress {
+  box-shadow: 0 0 15px #00f2fe;
+}
+
+/* ===== PROJECTS ===== */
+.project-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.project {
+  background: #0f3460;
+  padding: 25px;
+  width: 280px;
+  border-radius: 15px;
+  transition: 0.3s;
+  text-align: left;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #00f2fe;
+}
+
+.project h3 {
+  color: #00f2fe;
+  margin-bottom: 10px;
+}
+
+.project p {
+  color: #ccc;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+/* ===== CONTACT ===== */
+.contact a {
+  color: #00f2fe;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-shadow: 0 0 10px #00f2fe;
+}
+
+.contact p {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0f3460;
+  font-size: 0.9em;
+  color: #bbb;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 120px;
+  }
+
+  .hero-img {
+    width: 200px;
+    margin-top: 20px;
+  }
+
+  .project-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
